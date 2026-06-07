@@ -763,3 +763,92 @@ footer h3 {
 
 
 
+
+
+
+
+
+
+
+
+
+/* 📱 MOBILE RESPONSIVE FIXES */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+        min-width: auto;
+        width: 90%;
+    }
+
+    .nav-links a {
+        margin-left: 15px;
+    }
+
+    /* PREVIEW SECTIONS */
+    .preview-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .preview-text p {
+        text-align: left;
+    }
+
+    .about-photo1 {
+        max-width: 90%;
+    }
+
+    /* FEATURES */
+    .intro-features {
+        gap: 20px;
+    }
+
+    /* SERVICES SELECTOR */
+    .selector-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* CONVEYOR BELT */
+    .home-gallery-belt img {
+        width: 180px;
+        height: 120px;
+    }
+
+    .Our-Store-Preview {
+        padding: 20px;
+    }
+
+    /* GALLERY PREVIEW */
+    .Gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* CONTACT PREVIEW */
+    .Contact-Preview {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-info {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .contact-form-container {
+        width: 100%;
+    }
+
+    /* FLOATING CTA */
+    .floating-circle-cta {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 11px;
+    }
+}
