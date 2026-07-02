@@ -871,6 +871,30 @@ footer h3 {
         font-size: 14px;
     }
 
+
+        .hero {
+        height: auto;
+        padding: 120px 20px 60px; /* space for navbar + breathing room */
+    }
+
+    .hero-box {
+        top: auto;
+        transform: none;
+        margin-top: 20px;
+        padding: 25px 20px;
+        max-width: 90%;
+    }
+
+    .hero-box img {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    .hero-background {
+        filter: brightness(0.4);
+    }
+
+
     .logo img {
         height: 30px;
     }
