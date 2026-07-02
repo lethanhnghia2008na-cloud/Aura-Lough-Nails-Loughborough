@@ -6,7 +6,7 @@ html {
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
-    background: #ffffff;
+    background: #f7f3ee;
     color: #333;
 }
 
@@ -28,11 +28,6 @@ body {
     min-width: 600px;
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: #C9A86A;
-}
 
 .nav-links a {
     margin-left: 40px;
@@ -135,7 +130,7 @@ body {
 /* PREVIEW SECTIONS */
 .preview {
     padding: 30px 20px;
-    background: #F7F3EE;
+    background: #f4f4f4;
     border-bottom: 1px solid #eee;
     margin-top: 50px;
 }
@@ -248,7 +243,7 @@ body {
 .Our-Store-Preview a {
     background: #C9A86A;
     padding: 20px 40px;
-    border-radius: 12px;
+    border-radius: none;
     color: black;
     text-decoration: none;
     
@@ -415,7 +410,7 @@ body {
 
 
 
-/* Services page */
+/* Services section in home page */
 
 .service-selector {
     text-align: center;
@@ -438,7 +433,7 @@ body {
 }
 
 .selector-box {
-    background: white;
+    background: #C9A86A;
     padding: 18px 30px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
@@ -451,7 +446,7 @@ body {
 }
 
 .selector-box:hover {
-    background: #C9A86A;
+    background: #b8a4d1;
     color: white;
     transform: translateY(-5px);
 }
@@ -500,12 +495,77 @@ body {
     line-height: 1.6;
 }
 
+/* Services page */
+.services-wrapper {
+    max-width: 900px;
+    margin: 120px auto;
+    padding: 20px;
+}
+
+.service-block {
+    background: #F7F3EE;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.service-title {
+    font-size: 28px;
+    color: #C9A86A;
+    margin-bottom: 20px;
+}
+
+.service-description {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.service-item {
+    background: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.service-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.service-price {
+    background: #C9A86A;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.addon-box {
+    background: #e8e0d4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.addon-box h3 {
+    color: #b08f5c;
+    margin-bottom: 10px;
+}
 
 
 
 
-
-/* Contact page */
 
 
 
@@ -686,7 +746,8 @@ body {
 .contact-page {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 150px 20px;
+    background: #f7f3ee;
 }
 
 /* MAIN HEADING */
@@ -702,6 +763,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    margin-top: 40px;
 }
 
 /* LEFT SIDE */
@@ -753,7 +815,7 @@ body {
 
 /* FOOTER */
 footer {
-    background: #333;
+    background: darkgrey;
     color: white;
     text-align: center;
     padding: 20px;
@@ -793,7 +855,7 @@ footer h3 {
 
 
 /* 📱 REAL MOBILE SECTION */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
 
     /* NAVBAR */
     .navbar {
