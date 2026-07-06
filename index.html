@@ -51,7 +51,7 @@
             
             <p>Luxury Beauty - Wellness - Relaxation.</p>
             <a href="services.html" class="btn">Explore Services</a>
-            <a href="contact.html" class="btn1">Book appointment</a>
+            <a href="https://appbooking.vdit.co.uk/Beauty/FindService?cid=20260624143948093744" class="btn1">Book appointment</a>
         </div>
     </section>
 
@@ -106,31 +106,61 @@
     </section>
 
     <!-- SERVICES PREVIEW -->
+
 <section class="service-selector">
 
     <h2 class="selector-heading">Our Services</h2>
 
+    <!-- ROW OF 4 COLUMNS -->
     <div class="selector-row">
-        <a href="services.html#service1" class="selector-box">MANICURE & SHELLAC</a>
-        <a href="services.html#service2" class="selector-box">REMOVAL SERVICES & EXTRA </a>
-    </div>
 
-    <div class="selector-row">
-        <a href="services.html#service3" class="selector-box">AURA COMBO PACKAGES (HEAD • HANDS • FEET)</a>
-        <a href="services.html#service4" class="selector-box">BIAB/BUILDER GEL</a>
-        <a href="services.html#service5" class="selector-box">ACRYLIC NAIL</a>
-    </div>
+        <!-- COLUMN 1: Nails Care -->
+        <div class="selector-column nails-column">
+            <div class="selector-box main-box" onclick="toggleDropdown('nails-dropdown')">
+                Nails Care
+            </div>
 
-    <div class="selector-row">
-        <a href="services.html#service6" class="selector-box">REFILL SERVICES</a>
-    </div>
+            <div id="nails-dropdown" class="dropdown">
+                <a href="services.html#service1" class="selector-box sub-box">MANICURE & SHELLAC</a>
+                <a href="services.html#service2" class="selector-box sub-box">REMOVAL SERVICES & EXTRA</a>
+                <a href="services.html#service4" class="selector-box sub-box">BIAB/BUILDER GEL</a>
+                <a href="services.html#service5" class="selector-box sub-box">ACRYLIC NAIL</a>
+                <a href="services.html#service6" class="selector-box sub-box">REFILL SERVICES</a>
+            </div>
+        </div>
 
-    <div class="selector-row">
-        <a href="services.html#service7" class="selector-box">AURA SCALP RITUAL</a>
-        <a href="services.html#service8" class="selector-box">AURA PEDICURE RITUAL COLLECTION</a>
+        <!-- COLUMN 2 -->
+        <div class="selector-column">
+            <a href="services.html#service7" class="selector-box main-box">
+                AURA SCALP RITUAL
+            </a>
+        </div>
+
+        <!-- COLUMN 3 -->
+        <div class="selector-column">
+            <a href="services.html#service8" class="selector-box main-box">
+                AURA PEDICURE RITUAL COLLECTION
+            </a>
+        </div>
+
+        <!-- COLUMN 4 -->
+        <div class="selector-column">
+            <a href="services.html#service3" class="selector-box main-box">
+                AURA COMBO PACKAGES
+            </a>
+        </div>
+
     </div>
 
 </section>
+
+<script>
+function toggleDropdown(id) {
+    const box = document.getElementById(id);
+    box.style.display = box.style.display === "block" ? "none" : "block";
+}
+</script>
+
 
 
     <!-- OUR STORE PREVIEW -->
@@ -157,7 +187,7 @@
 
             
         </div>
-        <a href="contact.html">Book free appointment today</a>
+        <a href="https://appbooking.vdit.co.uk/Beauty/FindService?cid=20260624143948093744">Book free appointment today</a>
     </section>
 
 
@@ -218,9 +248,33 @@
 
     </section>
 
-<a href="contact.html" class="floating-circle-cta">
+<a href="https://appbooking.vdit.co.uk/Beauty/FindService?cid=20260624143948093744" class="floating-circle-cta">
     Book<br>Now
 </a>
+
+
+<!-- FLOATING FREE DRINKS BUTTON -->
+<div class="floating-circle-drinks" onclick="showDrinksImage()">
+    Free Drinks
+</div>
+
+<!-- IMAGE POPUP -->
+<div id="drinks-popup" class="drinks-popup">
+    <div class="drinks-popup-content">
+        <span class="close-popup" onclick="hideDrinksImage()">x</span>
+        <img src="Images/photo8.jpg" alt="Free Drinks" />
+    </div>
+</div>
+<script>
+function showDrinksImage() {
+    document.getElementById("drinks-popup").style.display = "flex";
+}
+
+function hideDrinksImage() {
+    document.getElementById("drinks-popup").style.display = "none";
+}
+</script>
+
 
 
 
@@ -230,12 +284,12 @@
         
     <div class="footer-section">
         <h3>Business working time</h3>
-        <p>Monday: 9am - 6:30pm</p>
-        <p>Tuesday: 9am - 6:30pm</p>
-        <p>Wednesday: 9am - 6:30pm</p>
-        <p>Thursday: 9am - 6:30pm</p>
-        <p>Friday: 9am - 6:30pm</p>
-        <p>Saturday: 9am - 6:30pm</p>
+        <p>Monday: 9am - 6pm</p>
+        <p>Tuesday: 9am - 6pm</p>
+        <p>Wednesday: 9am - 6pm</p>
+        <p>Thursday: 9am - 6pm</p>
+        <p>Friday: 9am - 6pm</p>
+        <p>Saturday: 9am - 6pm</p>
         <p>Sunday: close</p>
     </div>
 
