@@ -1026,6 +1026,37 @@ footer h3 {
         padding: 20px;
     }
 
+
+    /* 📱 MOBILE FIX FOR SERVICE SELECTOR */
+.selector-row {
+    flex-direction: column;      /* stack all 4 columns */
+    align-items: center;
+    gap: 15px;
+}
+
+.selector-column {
+    width: 100%;
+    align-items: center;
+}
+
+.selector-box.main-box {
+    width: 90%;                  /* full-width buttons on phone */
+    max-width: 300px;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.selector-box.sub-box {
+    width: 90%;
+    max-width: 300px;
+    font-size: 14px;
+    padding: 12px;
+}
+
+.dropdown {
+    margin-top: 10px;
+}
+
     /* FLOATING CTA */
     .floating-circle-cta {
         width: 60px;
@@ -1034,6 +1065,25 @@ footer h3 {
         right: 20px;
         font-size: 11px;
     }
+}
+
+
+/* 📱 FIX PREVIEW TEXT CUTTING OFF */
+.preview-content {
+    flex-direction: column;
+    padding: 0 15px;        /* adds breathing room */
+    text-align: left;       /* keeps paragraphs readable */
+}
+
+.preview-text {
+    width: 100%;
+    padding: 0 10px;        /* prevents left-side clipping */
+    box-sizing: border-box; /* ensures padding doesn't break layout */
+}
+
+.preview-text p {
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 
