@@ -63,7 +63,7 @@ body {
 .hero-background {
     position: absolute;
     inset: 0;
-    background: url('Images/photo3.jpg') center/cover no-repeat;
+    background: url('Images/photo13.jpg') center/cover no-repeat;
     z-index: 0;
     filter: brightness(0.5);
 }
