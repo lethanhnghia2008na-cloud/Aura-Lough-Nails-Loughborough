@@ -1154,3 +1154,436 @@ footer h3 {
     cursor: pointer;
 }
 
+
+
+
+
+
+
+/* =====================================================
+   🎄 AURA BEAUTY LOUNGE — CHRISTMAS DECORATIONS
+   TEMPORARY EFFECTS — REMOVE AFTER CHRISTMAS
+   ===================================================== */
+
+.aura-christmas-decor {
+    position: relative;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Falling snow */
+
+.aura-christmas-snow {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.65;
+
+    background-image:
+        radial-gradient(3px 3px at 10% 15%, white 98%, transparent),
+        radial-gradient(2px 2px at 25% 40%, white 98%, transparent),
+        radial-gradient(3px 3px at 40% 75%, white 98%, transparent),
+        radial-gradient(2px 2px at 60% 25%, white 98%, transparent),
+        radial-gradient(3px 3px at 75% 60%, white 98%, transparent),
+        radial-gradient(2px 2px at 90% 85%, white 98%, transparent);
+
+    background-size: 200px 200px;
+
+    animation: auraSnowFall 12s linear infinite;
+}
+
+/* Christmas tree */
+
+.aura-christmas-tree {
+    position: absolute;
+    right: 35px;
+    top: 20px;
+
+    font-size: clamp(45px, 6vw, 85px);
+
+    filter: drop-shadow(0 5px 12px rgba(201, 168, 106, 0.25));
+
+    animation: auraTreeSway 4s ease-in-out infinite;
+}
+
+/* Santa */
+
+.aura-christmas-santa {
+    position: fixed;
+    right: -80px;
+    bottom: 15%;
+    z-index: 9997;
+
+    font-size: 45px;
+    pointer-events: none;
+
+    animation: auraSantaFloat 22s linear infinite;
+}
+
+/* Christmas presents */
+
+.aura-christmas-gifts {
+    position: absolute;
+    left: 30px;
+    bottom: 15px;
+
+    font-size: 32px;
+    letter-spacing: 8px;
+
+    animation: auraGiftBounce 3s ease-in-out infinite;
+}
+
+/* Snow animation */
+
+@keyframes auraSnowFall {
+    from {
+        background-position: 0 -200px;
+    }
+
+    to {
+        background-position: 0 600px;
+    }
+}
+
+/* Tree movement */
+
+@keyframes auraTreeSway {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
+/* Santa floats across the screen */
+
+@keyframes auraSantaFloat {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-120vw);
+    }
+}
+
+/* Gifts gently bounce */
+
+@keyframes auraGiftBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+
+    .aura-christmas-tree {
+        top: 10px;
+        right: 10px;
+        font-size: 45px;
+    }
+
+    .aura-christmas-gifts {
+        left: 10px;
+        bottom: 8px;
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+
+    .aura-christmas-santa {
+        font-size: 34px;
+        bottom: 12%;
+    }
+
+}
+
+/* Accessibility: respect reduced motion settings */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .aura-christmas-snow,
+    .aura-christmas-tree,
+    .aura-christmas-santa,
+    .aura-christmas-gifts {
+        animation: none !important;
+    }
+
+}
+
+
+
+/* ==============================================
+   AURA CHRISTMAS PAGE — TEMPORARY
+   Delete this entire section after Christmas
+   ============================================== */
+
+.aura-xmas-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 600px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        radial-gradient(ellipse at center,
+            #28513b 0%,
+            #173d2d 55%,
+            #0b251a 100%);
+
+    color: #f8f1e5;
+}
+
+/* Background glow */
+
+.aura-xmas-page::before,
+.aura-xmas-page::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(211, 176, 105, 0.12);
+    filter: blur(90px);
+}
+
+.aura-xmas-page::before {
+    top: -100px;
+    left: -100px;
+}
+
+.aura-xmas-page::after {
+    bottom: -100px;
+    right: -100px;
+}
+
+/* Snow */
+
+.aura-xmas-snow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(3px 3px at 10% 20%, white 99%, transparent),
+        radial-gradient(2px 2px at 30% 70%, white 99%, transparent),
+        radial-gradient(3px 3px at 50% 40%, white 99%, transparent),
+        radial-gradient(2px 2px at 75% 15%, white 99%, transparent),
+        radial-gradient(3px 3px at 90% 80%, white 99%, transparent);
+
+    background-size: 220px 220px;
+    animation: aura-xmas-snow 12s linear infinite;
+    opacity: 0.45;
+}
+
+/* Decorative gold stars */
+
+.aura-xmas-lights {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 100%;
+
+    color: #d9bb79;
+    font-size: 15px;
+    letter-spacing: 5px;
+
+    animation: aura-xmas-twinkle 3s ease-in-out infinite;
+}
+
+/* Content */
+
+.aura-xmas-content {
+    position: relative;
+    z-index: 2;
+    padding: 25px 20px;
+    max-width: 800px;
+    animation: aura-xmas-appear 1.5s ease both;
+}
+
+.aura-xmas-eyebrow {
+    color: #d9bb79;
+    font-size: 11px;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.aura-xmas-stars {
+    font-size: 18px;
+    letter-spacing: 8px;
+    color: #f1d79f;
+    animation: aura-xmas-twinkle 2s infinite;
+}
+
+/* Tree */
+
+.aura-xmas-tree {
+    font-size: clamp(80px, 13vw, 135px);
+    line-height: 1.2;
+    margin: 10px 0;
+
+    filter: drop-shadow(0 0 20px rgba(218, 186, 119, 0.15));
+
+    animation: aura-xmas-sway 4s ease-in-out infinite;
+}
+
+/* Merry Christmas */
+
+.aura-xmas-content h1 {
+    margin: 10px 0 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+
+    font-size: clamp(48px, 8vw, 90px);
+    line-height: 1.1;
+
+    color: #e8cd94;
+
+    text-shadow: 0 0 30px rgba(218, 186, 119, 0.12);
+}
+
+/* Message */
+
+.aura-xmas-message {
+    font-family: Georgia, serif;
+    font-size: clamp(15px, 2vw, 19px);
+    line-height: 1.9;
+    color: #f4ecdf;
+    letter-spacing: 0.5px;
+}
+
+/* Divider */
+
+.aura-xmas-divider {
+    color: #d9bb79;
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin: 25px 0;
+}
+
+/* Signature */
+
+.aura-xmas-signature {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #e7d7b8;
+    letter-spacing: 1px;
+}
+
+/* Presents */
+
+.aura-xmas-presents {
+    margin-top: 25px;
+    font-size: 28px;
+    letter-spacing: 8px;
+
+    animation: aura-xmas-float 3s ease-in-out infinite;
+}
+
+/* Santa floating across the bottom */
+
+.aura-xmas-santa {
+    position: absolute;
+    left: -80px;
+    bottom: 8%;
+    font-size: 38px;
+    z-index: 3;
+    pointer-events: none;
+
+    animation: aura-xmas-santa-move 22s linear infinite;
+}
+
+/* Animations */
+
+@keyframes aura-xmas-snow {
+    from {
+        background-position: 0 -220px;
+    }
+    to {
+        background-position: 0 800px;
+    }
+}
+
+@keyframes aura-xmas-twinkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes aura-xmas-sway {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+@keyframes aura-xmas-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes aura-xmas-appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aura-xmas-santa-move {
+    from { left: -80px; }
+    to { left: 110%; }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .aura-xmas-page {
+        min-height: 550px;
+    }
+
+    .aura-xmas-eyebrow {
+        letter-spacing: 4px;
+        font-size: 9px;
+    }
+
+    .aura-xmas-content h1 {
+        font-size: clamp(44px, 12vw, 58px);
+    }
+
+    .aura-xmas-tree {
+        font-size: 95px;
+    }
+
+    .aura-xmas-message {
+        font-size: 14px;
+    }
+
+    .aura-xmas-presents {
+        font-size: 23px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .aura-xmas-page * {
+        animation: none !important;
+    }
+}
